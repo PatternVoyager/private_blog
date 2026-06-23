@@ -1,5 +1,3 @@
-import './globals.css';
-
 export default function ArticlesPage () {
     return (
         <div className="header">
