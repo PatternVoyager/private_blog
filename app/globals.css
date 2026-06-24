@@ -30,7 +30,6 @@ body {
 }
 
 .navbar nav ul li a {
-  display: block;
   color: #f8f9fa;
   font-size: 17px;
   text-decoration: none;
