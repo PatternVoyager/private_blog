@@ -1,13 +1,15 @@
+/* ==========================================
+   1. RESET GLOBAL (Wajib agar navbar mentok di pojok kiri atas)
+   ========================================== */
 html, body {
-  background-color: #f8f9fa;
-  color: #495057;
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* navigation bar */
+/* ==========================================
+   2. PENGATURAN UTAMA NAVBAR (Dasar untuk HP & PC)
+   ========================================== */
 .navbar {
   width: 100%;
   height: 50px;
@@ -21,6 +23,7 @@ html, body {
 
 .navbar nav {
   height: 100%;
+  width: 100%;
 }
 
 .navbar nav ul {
@@ -29,15 +32,17 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
+/* KUNCI: Membuat seluruh area kotak menu bisa di-klik */
 .navbar nav ul li a {
-  display: block;
+  display: block;            /* Mengubah link menjadi balok penuh */
+  height: 100%;              /* Memenuhi tinggi navbar (50px) */
+  line-height: 50px;         /* Memastikan teks pas di tengah secara vertikal */
   color: #f8f9fa;
   font-size: 17px;
   text-decoration: none;
-  line-height: 50px;
-  padding: 0 20px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.2s, color 0.2s;
@@ -53,20 +58,18 @@ html, body {
    ========================================== */
 @media screen and (max-width: 767px) {
   .navbar nav ul {
-    flex-direction: row;       /* Menu tetap berjejer ke samping */
-    justify-content: center;   /* Cadangan rata tengah */
-    width: 100%;               /* Pastikan pembungkusnya penuh se-layar HP */
+    flex-direction: row;       
   }
   
-  /* BARU: Memaksa setiap item menu (Home, About, Articles) membagi rata lebar HP */
+  /* Menu membagi rata lebar layar HP */
   .navbar nav ul li {
-    flex: 1;                   /* Membagi lebar layar sama rata (misal: 3 menu = masing-masing 33.3%) */
-    text-align: center;        /* Memastikan teks menu berada tepat di tengah kotaknya */
+    flex: 1;                   
+    text-align: center;        
   }
   
   .navbar nav ul li a {
-    padding: 0;                /* Hapus padding kanan-kiri lama agar tidak tabrakan dengan flex: 1 */
-    font-size: 15px;           /* Ukuran tulisan pas untuk HP */
+    padding: 0;                /* Di HP tidak perlu padding samping karena sudah dibagi flex: 1 */
+    font-size: 15px;           
   }
 }
 
@@ -75,11 +78,22 @@ html, body {
    ========================================== */
 @media screen and (min-width: 768px) {
   .navbar nav ul {
-    flex-direction: row;       /* Menu tetap berjejer ke samping */
-    justify-content: center;   /* MEMAKSA MENU PAS DI TENGAH LAYAR PC */
-    align-items: center;       /* Rata tengah atas-bawah */
+    flex-direction: row;       
+    justify-content: flex-start; /* MEMAKSA MENU RATA KIRI DI DESKTOP */
+    align-items: center;       
+  }
+
+  .navbar nav ul li {
+    flex: none;                  /* Kembalikan ukuran asli di PC (tidak melebar se-layar) */
+  }
+  
+  /* Memberikan jarak klik yang luas dan nyaman di PC */
+  .navbar nav ul li a {
+    padding: 0 25px;             /* Tombol melebar ke samping, seluruh area kotak ini bisa di-klik */
+    font-size: 17px;
   }
 }
+
 
 .header {
   width: 90%;
