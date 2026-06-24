@@ -18,12 +18,14 @@ body {
 
 @media screen and (min-width: 768px) {
   .navbar nav ul {
-    display: flex;
+    flex-direction: row;
     list-style: none;
     justify-content: center;
     align-items: center;     
     margin: 0;               
-    padding: 0;              
+    padding: 0;
+    top: 0;
+    left: 0;
     height: 100%; 
   }
 
