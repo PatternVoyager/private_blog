@@ -2,8 +2,8 @@
    1. RESET GLOBAL (Wajib agar navbar mentok di pojok kiri atas)
    ========================================== */
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box;
 }
 
@@ -27,10 +27,11 @@ html, body {
 }
 
 .navbar nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   height: 100%;
   width: 100%;
 }
