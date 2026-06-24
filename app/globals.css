@@ -16,27 +16,27 @@ body {
   overflow: hidden;
 }
 
-.navbar nav ul {
-  display: flex;
-  list-style: none;
-}
+@media screen and (min-width: 768px) {
+  .navbar nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;     
+    margin: 0;               
+    padding: 0;              
+    height: 100%; 
+  }
 
-.navbar nav ul li {
-  display: block;
-  left: 0;
-  justify-content: left;
-  align-items: center;
-}
-
-.navbar nav ul li a {
-  color: #f8f9fa;
-  font-size: 17px;
-  text-decoration: none;
-  line-height: 50px;
-  padding: 0 20px;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-   transition: background-color 0.2s, color 0.2s;
+  .navbar nav ul li a {
+    color: #f8f9fa;
+    font-size: 17px;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 20px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.2s, color 0.2s;
+  }
 }
 
 .navbar nav ul li:hover a {
