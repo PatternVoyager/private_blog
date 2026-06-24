@@ -1,7 +1,10 @@
-body {
+html, body {
   background-color: #f8f9fa;
   color: #495057;
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* navigation bar */
@@ -12,33 +15,32 @@ body {
   left: 0;
   position: fixed;
   background-color: #059862;
-  box-shadow: 0 0 25px rgba(0,0,0,0.3);
-  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 
-@media screen and (min-width: 768px) {
-  .navbar nav ul {
-    flex-direction: row;
-    list-style: none;
-    justify-content: center;
-    align-items: center;     
-    margin: 0;               
-    padding: 0;
-    top: 0;
-    left: 0;
-    height: 100%; 
-  }
+.navbar nav {
+  height: 100%;
+}
 
-  .navbar nav ul li a {
-    color: #f8f9fa;
-    font-size: 17px;
-    text-decoration: none;
-    line-height: 50px;
-    padding: 0 20px;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.2s, color 0.2s;
-  }
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar nav ul li a {
+  display: block;
+  color: #f8f9fa;
+  font-size: 17px;
+  text-decoration: none;
+  line-height: 50px;
+  padding: 0 20px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .navbar nav ul li:hover a {
