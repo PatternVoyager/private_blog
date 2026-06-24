@@ -25,7 +25,7 @@ export function WebsiteJsonLd() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'AzmiFatani',
+    name: 'Azmi Fatani',
     url: SITE_URL,
     description: 'Personal portfolio of Muhammad Azmi Fatani — Junior Web Developer & Senior Reverse Engineer.',
     author: {
