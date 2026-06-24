@@ -19,6 +19,9 @@ body {
 .navbar nav ul {
   display: flex;
   list-style: none;
+}
+
+.navbar nav ul li {
   justify-content: left;
   align-items: center;
   margin: 0;
