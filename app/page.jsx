@@ -1,17 +1,22 @@
-export default function HomePage () {
-    return (
-        <>
-            <div className="header">
-                <h1>Hello World, <span>this is Azmi</span></h1>
-            </div>
-            <figure className="profile-card">
-                <div className="photo-frame">
-                    <img src="img/empty_profile.png" alt="Foto Muhammad Azmi Fatani" />
-                </div>
-                <figcaption className="description">
-                    Hello everyone! i am Muhammad Azmi Fatani, a junior Web Developer & senior Reverse Engineer 
-                </figcaption>
-            </figure>
-        </>
-    )
+import HomeClient from './HomeClient';
+
+export const metadata = {
+  title: 'Muhammad Azmi Fatani | Web Developer & Reverse Engineer',
+  description:
+    'Junior Web Developer & Senior Reverse Engineer specializing in React, Next.js, and low-level systems. Crafting digital experiences with clean code.',
+  openGraph: {
+    title: 'Muhammad Azmi Fatani | Web Developer & Reverse Engineer',
+    description:
+      'Junior Web Developer & Senior Reverse Engineer. Crafting digital experiences with clean code.',
+    url: 'https://azmiofficial.my.id',
+  },
+  twitter: {
+    title: 'Muhammad Azmi Fatani',
+    description:
+      'Junior Web Developer & Senior Reverse Engineer.',
+  },
+};
+
+export default function HomePage() {
+  return <HomeClient />;
 }
