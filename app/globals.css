@@ -48,24 +48,36 @@ html, body {
   color: #495057;
 }
 
-@media screen and (max-width: 768px) {
+/* ==========================================
+   3. TAMPILAN KHUSUS HP (Di bawah 768px)
+   ========================================== */
+@media screen and (max-width: 767px) {
   .navbar nav ul {
-    display: flex;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    flex-direction: row;       /* Menu tetap berjejer ke samping */
+    justify-content: center;   /* Cadangan rata tengah */
+    width: 100%;               /* Pastikan pembungkusnya penuh se-layar HP */
   }
-
+  
+  /* BARU: Memaksa setiap item menu (Home, About, Articles) membagi rata lebar HP */
   .navbar nav ul li {
-    flex-grow: 1;
+    flex: 1;                   /* Membagi lebar layar sama rata (misal: 3 menu = masing-masing 33.3%) */
+    text-align: center;        /* Memastikan teks menu berada tepat di tengah kotaknya */
   }
-
+  
   .navbar nav ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0;
+    padding: 0;                /* Hapus padding kanan-kiri lama agar tidak tabrakan dengan flex: 1 */
+    font-size: 15px;           /* Ukuran tulisan pas untuk HP */
+  }
+}
+
+/* ==========================================
+   4. TAMPILAN KHUSUS PC / DESKTOP (768px ke atas)
+   ========================================== */
+@media screen and (min-width: 768px) {
+  .navbar nav ul {
+    flex-direction: row;       /* Menu tetap berjejer ke samping */
+    justify-content: center;   /* MEMAKSA MENU PAS DI TENGAH LAYAR PC */
+    align-items: center;       /* Rata tengah atas-bawah */
   }
 }
 
