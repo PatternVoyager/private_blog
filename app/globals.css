@@ -18,9 +18,16 @@ body {
 
 .navbar nav ul {
   display: flex;
+  list-style: none;
+  justify-content: left;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .navbar nav ul li a {
+  display: block;
   color: #f8f9fa;
   font-size: 17px;
   text-decoration: none;
@@ -28,6 +35,7 @@ body {
   padding: 0 20px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+   transition: background-color 0.2s, color 0.2s;
 }
 
 .navbar nav ul li:hover a {
