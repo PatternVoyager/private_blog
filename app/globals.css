@@ -16,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-.navbar nav ul li {
+.navbar nav ul {
   display: flex;
 }
 
