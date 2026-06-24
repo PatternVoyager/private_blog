@@ -22,6 +22,8 @@ body {
 }
 
 .navbar nav ul li {
+  display: block;
+  left: 0;
   justify-content: left;
   align-items: center;
   margin: 0;
